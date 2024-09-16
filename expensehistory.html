@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense History</title>
+    <link rel="stylesheet" href="dashstyles.css">
+</head>
+<body>
+    <header>
+        <h1>Expense History</h1>
+        <button id="logoutBtn" class="button">Logout</button>
+        <button id="backBtn" class="button">Back to Dashboard</button>
+    </header>
+
+    <main>
+        <section>
+            <h2>Your Expense History</h2>
+            <table id="historyTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Name</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamically filled with JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="history.js"></script>
+</body>
+</html>

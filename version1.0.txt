@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard - Expense Tracker</title>
+        <link rel="stylesheet" href="dashstyles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Expense Tracker</h1>
+            <button id="logoutBtn" class="button">Logout</button>
+        </header>
+
+        <main>
+            <section>
+                <h2>Add New Expense</h2>
+                <form id="expenseForm">
+                    <input type="text" id="expenseName"
+                        placeholder="Expense Name" required>
+                    <input type="number" id="expenseAmount" placeholder="Amount"required>
+                    <br>
+                    <button type="submit" class="button7">Add Expense</button>
+                </form>
+            </section>
+
+            <section>
+                <h2>Your Expenses</h2>
+                <table id="expenseTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Name</th>
+                            <th>Amount</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamically filled with JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <script src="appv2.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+General Styles
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffd900;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+
+h1 {
+    margin: 0;
+}
+#expenseName{
+    border-radius: 10px;
+    padding: 5px;
+}
+#expenseAmount{
+    border-radius: 10px;
+    margin-left: 10px;
+    padding: 5px;
+}
+.button {
+    padding: 10px;
+    background-color: #28a745;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(231, 6, 6);
+
+}
+
+.button7 {
+    padding: 10px;
+    background-color: #28a745;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.button7:hover {
+    padding: 10px;
+    background-color: #fda500;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+}
+
+
+
+main {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th{
+    padding: 10px;
+    border: 1px solid #000f94; 
+    background-color: #0127ff;
+    color: #e6d70d;
+    
+}
+td {
+    padding: 10px;
+}
+
+ #balance {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#outOfMoney {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+}
+
+#historyBtn {
+    margin-top: 20px;
+}
+
+
+
+
+
+// Simulate login
+document.getElementById('loginForm1')?.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === 'ayush' && password === '2024')
+        {
+        // Redirect to dashboard on successful login
+        window.location.href = 'dashboard1.html';
+    } else {
+        // Show error message
+        document.getElementById('loginError').textContent = 'Invalid login details';
+    }
+});
+
+// Handle logout
+document.getElementById('logoutBtn')?.addEventListener('click', function () {
+    window.location.href = 'loginpage.html';
+});
+
+// Load expenses from localStorage
+function loadExpenses() {
+    const expenseTable = document.getElementById('expenseTable').getElementsByTagName('tbody')[0];
+    const expenses = JSON.parse(localStorage.getItem('expenses')) || [];
+
+    expenseTable.innerHTML = ''; // Clear existing rows
+
+    expenses.forEach((expense, index) => {
+        const newRow = expenseTable.insertRow();
+        const cell1 = newRow.insertCell(0);
+        const cell2 = newRow.insertCell(1);
+        const cell3 = newRow.insertCell(2);
+        const cell4 = newRow.insertCell(3);
+        const cell5 = newRow.insertCell(4);
+
+        cell1.textContent = new Date(expense.date).toDateString();
+        cell2.textContent = new Date(expense.date).toLocaleTimeString();
+
+        cell3.textContent = expense.name;
+        cell4.textContent = `₹${parseFloat(expense.amount).toFixed(2)}`;
+        const deleteButton = document.createElement('button1');
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = function () {
+            deleteExpense(index);
+        };
+        cell5.appendChild(deleteButton);
+    });
+}
+
+// Handle adding new expenses
+document.getElementById('expenseForm')?.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const expenseName = document.getElementById('expenseName').value;
+    const expenseAmount = document.getElementById('expenseAmount').value;
+
+    // Validate inputs
+    if (expenseName.trim() === '' || isNaN(expenseAmount) || expenseAmount <= 0) {
+        alert('Please enter valid expense details.');
+        return;
+    }
+
+    // Save expense to localStorage
+    const expenses = JSON.parse(localStorage.getItem('expenses')) || [];
+    expenses.push({ name: expenseName, amount: expenseAmount, date: new Date().toISOString() });
+    localStorage.setItem('expenses', JSON.stringify(expenses));
+
+    // Add expense to table
+    loadExpenses(); // Reload expenses to reflect the new entry
+
+    // Clear form fields
+    document.getElementById('expenseName').value = '';
+    document.getElementById('expenseAmount').value = '';
+});
+
+// Delete an expense
+function deleteExpense(index) {
+    const expenses = JSON.parse(localStorage.getItem('expenses')) || [];
+    expenses.splice(index, 1); // Remove the expense at the specified index
+    localStorage.setItem('expenses', JSON.stringify(expenses));
+    loadExpenses(); // Reload expenses to reflect the changes
+}
+
+// Load expenses when the dashboard loads
+window.onload = loadExpenses;
+
+
+var cursor = document.querySelector('.blob');
+
+document.addEventListener('mousemove', function (e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});
+

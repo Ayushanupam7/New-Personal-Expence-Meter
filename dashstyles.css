@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items:center;
+    background-color: #ffd900;
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+
+#sideNav {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    padding-top: 20px;
+}
+
+#sideNav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sideNav ul li {
+    margin: 0;
+}
+
+#sideNav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #444444;
+}
+
+#sideNav ul li a:hover {
+    background-color: #575757;
+}
+
+main {
+    margin-left: 220px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 10px;
+    border: 1px solid #000f94;
+    background-color: #0127ff;
+    color: #e6d70d;
+}
+
+td {
+    padding: 10px;
+}
+
+.button, .button7 {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button:hover, .button7:hover {
+    background-color: #fda500;
+    color: white;
+}
+
+
+#top {
+    /* margin-left: 200px; */
+}
+#expenseName{
+    border-radius: 10px;
+    padding: 5px;
+}
+#expenseAmount{
+    border-radius: 10px;
+    margin-left: 10px;
+    padding: 5px;
+}
+.button {
+    padding: 10px;
+    background-color: #28a745;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(231, 6, 6);
+
+}
+
+.button7 {
+    padding: 10px;
+    background-color: #28a745;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.button7:hover {
+    padding: 10px;
+    background-color: #fda500;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+}
+
+
+
+main {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th{
+    padding: 10px;
+    border: 1px solid #000f94; 
+    background-color: #0127ff;
+    color: #e6d70d;
+    
+}
+td {
+    padding: 10px;
+}
+#balance {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#outOfMoney {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+}
+
+#historyBtn {
+    margin-top: 20px;
+}
+
+#budgetForm {
+    margin-bottom: 20px;
+}
+
+#budgetLimit {
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+
+
+
+

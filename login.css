@@ -1,0 +1,195 @@
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: #080808;
+            }
+
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+
+            }
+
+            .login-container {
+                display: flex;
+
+                width: 80%;
+                max-width: 1000px;
+                color: #ffffff;
+                box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+                background-color: #000000;
+                border-radius: 12px;
+            }
+
+            /* Left Side - Form */
+            .form-section {
+                flex: 1;
+
+                padding: 40px;
+            }
+
+            .form-section img {
+                width: 100px;
+            }
+
+
+            h1 {
+                font-size: 32px;
+                color: #ffffff;
+            }
+
+            p {
+                font-size: 16px;
+                color: #777;
+                margin-bottom: 20px;
+            }
+
+            label {
+                font-size: 14px;
+                color: #ffffff;
+            }
+
+            #loginForm1 {
+                margin-bottom: 15px;
+            }
+
+            #loginForm1 input {
+                width: 100%;
+                padding: 12px;
+                font-size: 16px;
+                border: 2px solid #ccc;
+                border-radius: 6px;
+                margin-top: 5px;
+            }
+
+            #loginForm1 input:focus {
+                outline: none;
+                border-color: #333;
+            }
+
+            .forgot-password {
+                display: block;
+                margin-bottom: 20px;
+                font-size: 14px;
+                color: #777;
+                text-align: right;
+            }
+
+            .btn-primary {
+                display: block;
+                width: 50%;
+                background-color: #3f51b5;
+                color: white;
+                border: none;
+                padding: 14px;
+                border-radius: 6px;
+                margin-top: 20px;
+                font-size: 16px;
+                cursor: pointer;
+                margin-bottom: 20px;
+            }
+
+            .btn-primary:hover {
+                background-color: #eba308;
+                border-color: #fff;
+            }
+
+            .divider {
+                text-align: center;
+                margin: 20px 0;
+                color: #777;
+            }
+
+            .signup {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .signup a {
+                color: #3f51b5;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .signup a:hover {
+                text-decoration: underline;
+            }
+
+            /* Right Side - Illustration */
+            .illustration-section {
+                flex: 1;
+                background-color:rgb(255, 183, 0);
+                padding: 40px;
+                border-top-right-radius: 12px;
+                border-bottom-right-radius: 12px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .illustration-section img {
+                width: 80%;
+                max-width: 300px;
+                margin-bottom: 20px;
+                border-radius: 20px;
+            }
+
+            .illustration-text {
+                text-align: center;
+                font-size: 16px;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            .dots {
+                display: flex;
+                justify-content: center;
+                gap: 5px;
+            }
+
+            .dots span {
+                width: 8px;
+                height: 8px;
+                background-color: #777;
+                border-radius: 50%;
+                display: inline-block;
+            }
+
+            .dots span.active {
+                background-color: #ffffff;
+            }
+
+            .error {
+                color: aqua;
+            }
+
+            .blob {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 650px;
+                height: 650px;
+                border-radius: 100%;
+                background-image: linear-gradient(#c7b5b5 90%, #000000);
+                filter: blur(250px);
+                transition: all 450ms ease-out;
+                position: fixed;
+                pointer-events: none;
+                left: 0;
+                top: 0;
+                transform: translate(calc(-50% + 15px), -50%);
+                z-index: -1;
+            }
+
+            #logo {
+                display: flex;
+                justify-content: center;
+            }

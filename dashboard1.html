@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Expense Tracker</title>
+    <link rel="stylesheet" href="dashstyles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="top">Expense Tracker</h1>
+        <button id="logoutBtn" class="button">Logout</button>
+    </header>
+
+    <div id="container">
+        
+        <nav id="sideNav">
+            <ul>
+                <li><a href="dashboard1.html">Home</a></li>
+                <li><a href="budgetplanner.html">Budget Planner</a></li>
+                <li><a href="expensehistory.html">History</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section>
+                <h2>Set Budget Limit</h2>
+                <form id="budgetForm">
+                    <input type="number" id="budgetLimit" placeholder="Set your budget limit" required>
+                    <button type="submit" class="button7">Set Budget</button>
+                </form>
+            </section>
+
+            <section>
+                <h2>Add New Expense</h2>
+                <form id="expenseForm">
+                    <input type="text" id="expenseName" placeholder="Expense Name" required>
+                    <input type="number" id="expenseAmount" placeholder="Amount" required>
+                    <br>
+                    <button type="submit" class="button7">Add Expense</button>
+                </form>
+            </section>
+
+            <section>
+                <h2>Your Expenses</h2>
+                <p id="balance">Current Balance: ₹0.00</p>
+                <p id="outOfMoney" style="color: red; display: none;">You are out of money!</p>
+                <table id="expenseTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Name</th>
+                            <th>Amount</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamically filled with JavaScript -->
+                    </tbody>
+                </table>
+                <button id="showChartBtn" class="button">Show Monthly Expenses Chart</button>
+                <canvas id="monthlyExpensesChart" width="400" height="200" style="display: none;"></canvas>
+            </section>
+        </main>
+    </div>
+
+    <script src="appv2.js"></script>
+</body>
+</html>
