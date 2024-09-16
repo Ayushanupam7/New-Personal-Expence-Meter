@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - Expense Tracker</title>
+        <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            color: black; 
+            margin: 0; 
+            padding: 20px; 
+        } 
+        .about-us { 
+            background: #312929; 
+            color: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+            text-align: center; 
+        } 
+        h1 { 
+            color: #eba308; 
+            font-size: 2.5em; 
+            margin-bottom: 20px; 
+        } 
+        p { 
+            font-size: 1.2em; 
+            margin-bottom: 20px; 
+            color: #fff; 
+        } 
+        .team { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: 20px; 
+        } 
+        .team-member { 
+            background: #eba308; 
+            color: #000; 
+            padding: 20px; 
+            border-radius: 8px; 
+            width: 100%; 
+            max-width: 300px; 
+            text-align: center; 
+            margin: auto; 
+        } 
+        .team-member h3 { 
+            margin: 10px 0; 
+            font-size: 1.5em; 
+        } 
+        .team-member p { 
+            font-size: 1em; 
+        } 
+        
+        
+/* Variables for light and dark mode */
+:root {
+    --background-color: #fff;
+    --text-color: #333;
+    --sidebar-background: #f4f4f4;
+    --button-background: #28a745;
+    --button-hover: #fda500;
+    --toggle-background: #ddd;
+}
+
+.dark-mode {
+    --background-color: #333;
+    --text-color: #fff;
+    --sidebar-background: #2c2c2c;
+    --button-background: #fda500;
+    --toggle-background: #555;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background-color: var(--sidebar-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-header img {
+    width: 90px;
+    border-radius: 50%;
+    margin-top: 20%;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    margin-top: 270px;
+}
+
+.nav-menu li {
+    padding: 10px 20px;
+}
+
+.nav-menu li a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li a i {
+    margin-right: 10px;
+}
+
+.nav-menu li:hover {
+    background-color:rgb(255, 166, 0);
+    width: 125%;}
+
+.sidebar-footer {
+    padding: 20px;
+    margin-bottom: -20px;
+    border-top: 1px solid goldenrod;
+}
+
+.logout-button {
+    background-color: var(--button-background);
+    color: white;
+    padding: 8px;
+    border: none;
+    width: 100%;
+    border-radius: 34px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-button i {
+    margin-right: 5px;
+}
+
+.logout-button:hover {
+    background-color:red;
+}
+
+/* The switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    margin-left: 18px;
+    bottom: 3px;
+}
+
+/* Hide default checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider for switch */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--toggle-background);
+    transition: 0.5s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Switch color when checked */
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+/* Move slider when checked */
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+/* Rounded switch */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+        main {
+            margin-left: 220px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        
+
+    </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <div class="brand-logo">
+                        <img src="2.1.3logo.png" alt="Logo">
+                    </div>
+                    <h3>Expence Tracker</h3>
+
+                </div>
+
+                <ul class="nav-menu">
+                    <li><a href="4.dashboard1.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="6.Expences.html"><i class="fas fa-home"></i>Add Expences</a></li>
+                    <li><a href="8.history.html"><i class="fas fa-chart-line"></i> History</a></li>
+                    <li><a href="11.Buddgetplanner.html"><i class="fas fa-chart-line"></i> Buddget Tips</a></li>
+                    <li><a href="12.Aboutus.html"><i class="fas fa-chart-bar"></i> About Us</a></li>
+                    
+                </ul>
+    
+    
+    
+
+                <div class="sidebar-footer">
+                    <div class="theme-toggle">
+                        <span>Dark Mode</span>
+                        <label class="switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <br>
+                    <button id="logoutBtn" class="logout-button"><i
+                            class="fas fa-sign-out-alt"></i> Logout</button>
+                    <p style="font-style: italic ; font-size: xx-small;">Web
+                        Version 3.0.0 AY</p>
+                </div>
+            </div>
+
+            <main>
+                <div class="about-us">
+                    <h1>About Us</h1>
+                    <p>Welcome to Expense Tracker! We are a dedicated team of
+                        creators committed to making your financial management
+                        simple and efficient. Our website is designed to help
+                        you track and manage your expenses effortlessly, with
+                        the goal of providing you with a seamless user
+                        experience.</p>
+                    <p>Expense Tracker is crafted with care by Ayush, Bhagyesh,
+                        Harshil, Arpit. Together, we aim to deliver a platform
+                        that empowers you to take control of your finances and
+                        achieve your financial goals.</p>
+                    <div class="team">
+                        <div class="team-member">
+                            <h3>Our Team</h3>
+                            <p>We are passionate individuals who bring together
+                                a diverse set of skills to ensure the success of
+                                Expense Tracker. Thank you for using our
+                                platform!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <script src="3.appv2.js"></script>
+        </main>
+    </body>

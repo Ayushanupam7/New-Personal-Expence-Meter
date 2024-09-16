@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense History</title>
+    <link rel="stylesheet" href="9.historystyles.css">
+</head>
+<body>
+    <div id="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand-logo">
+                    <img src="2.1.3logo.png" alt="Logo">
+                </div>
+                <h3>Expence Tracker</h3>
+                
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="4.dashboard1.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="6.Expences.html"><i class="fas fa-home"></i>Add Expences</a></li>
+                <li><a href="8.history.html"><i class="fas fa-chart-line"></i> History</a></li>
+                <li><a href="11.Buddgetplanner.html"><i class="fas fa-chart-line"></i> Buddget Tips</a></li>
+                <li><a href="12.Aboutus.html"><i class="fas fa-chart-bar"></i> About Us</a></li>
+                
+            </ul>
+
+
+
+
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                    <span >Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <br>
+                <button id="logoutBtn" class="logout-button"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                <p style="font-style: italic ; font-size: xx-small;">Web Version 3.0.0 AY</p>
+            </div>
+        </div>
+        <main>
+            <section>
+                <h2  style="font-weight: bolder; font-size: 50px;">Your Expense History</h2>
+                <table id="historyTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Name</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamically filled with JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <script src="10.history.js"></script>
+    </div>
+</body>
+</html>

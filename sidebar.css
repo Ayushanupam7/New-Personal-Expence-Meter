@@ -1,0 +1,108 @@
+/* Variables for light and dark mode */
+:root {
+    --background-color: #fff;
+    --text-color: #333;
+    --sidebar-background: #f4f4f4;
+    --button-background: #28a745;
+    --button-hover: #fda500;
+    --toggle-background: #ddd;
+}
+
+.dark-mode {
+    --background-color: #333;
+    --text-color: #fff;
+    --sidebar-background: #2c2c2c;
+    --button-background: #fda500;
+    --toggle-background: #555;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--sidebar-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-header img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    padding: 10px 20px;
+}
+
+.nav-menu li a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li a i {
+    margin-right: 10px;
+}
+
+.nav-menu li:hover {
+    background-color: var(--toggle-background);
+}
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.logout-button {
+    background-color: var(--button-background);
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-button i {
+    margin-right: 5px;
+}
+
+.logout-button:hover {
+    background-color: var(--button-hover);
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.theme-toggle input {
+    cursor: pointer;
+}

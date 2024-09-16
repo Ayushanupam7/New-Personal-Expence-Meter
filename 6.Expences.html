@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard - Expense Tracker</title>
+        <link rel="stylesheet" href="7.Expences.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto Mono'
+            rel='stylesheet'>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    </head>
+    <body>
+
+        <div id="container">
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <div class="brand-logo">
+                        <img src="2.1.3logo.png" alt="Logo">
+                    </div>
+                    <h3>Expence Tracker</h3>
+
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="4.dashboard1.html"><i class="fas fa-home"></i>
+                            Dashboard</a></li>
+                    <li><a href="6.Expences.html"><i class="fas fa-home"></i>Add
+                            Expences</a></li>
+                    <li><a href="8.history.html"><i
+                                class="fas fa-chart-line"></i> History</a></li>
+                    <li><a href="11.Buddgetplanner.html"><i
+                                class="fas fa-chart-line"></i> Buddget
+                            Tips</a></li>
+                    <li><a href="12.Aboutus.html"><i
+                                class="fas fa-chart-bar"></i> About Us</a></li>
+
+                </ul>
+
+                <div class="sidebar-footer">
+                    <div class="theme-toggle">
+                        <span>Dark Mode</span>
+                        <label class="switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <br>
+                    <button id="logoutBtn" class="logout-button"><i
+                            class="fas fa-sign-out-alt"></i> Logout</button>
+                    <p style="font-style: italic ; font-size: xx-small;">Web
+                        Version 3.0.0 AY</p>
+                </div>
+            </div>
+            <main>
+                <section>
+                    <p id="balance" style="font-size: 50px;">Current Balance:
+                        ₹0.00</p>
+                    <p id="outOfMoney" style="color: red; display: none;">You
+                        are out of money!</p>
+
+                    <h1 class="gemini">Set Budget Limit</h1>
+                    <form id="budgetForm">
+                        <input type="number" id="budgetLimit"
+                            placeholder="Set your budget limit" required>
+                        <button type="submit" class="button12">Set
+                            Budget</button>
+                    </form>
+                </section>
+                <hr style="border-width: px;border-color: goldenrod;">
+                <section>
+                    <h1 class="gemini" style=" font-size: 40px;">Add New
+                        Expense</h1>
+                    <form id="expenseForm">
+                        <!-- New Date Field -->
+                        <input type="date" id="expenseDate" required><br>
+                        <input list="expenseSuggestions" id="expenseName"
+                            placeholder="Expense Name" required>
+                        <datalist id="expenseSuggestions">
+                            <option value="Groceries"></option>
+                            <option value="Rent"></option>
+                            <option value="Utilities"></option>
+                            <option value="Transportation"></option>
+                            <option value="Entertainment"></option>
+                            <option value="Dining Out"></option>
+                            <option value="Shopping"></option>
+                            <option value="Insurance"></option>
+                            <option value="Subscriptions"></option>
+                            <option value="Medical"></option>
+                            <option value="Education"></option>
+                            <option value="Travel"></option>
+                            <option value="Savings"></option>
+                            <option value="Investments"></option>
+                        </datalist>
+
+                        <input type="number" id="expenseAmount"
+                            placeholder="Amount" required>
+                        <br>
+                        <button type="submit" class="button7">Add
+                            Expense</button>
+                    </form>
+                </section>
+
+                <section>
+                    <h2>Your Expenses :-</h2>
+                    <table id="expenseTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Name</th>
+                                <th>Amount</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dynamically filled with JavaScript -->
+                        </tbody>
+                    </table>
+                    <main>
+                        <!-- Existing sections -->
+
+                        <!-- Add chart containers -->
+                        <section>
+                            <h2>Monthly Expenses Line Chart</h2>
+                            <canvas id="lineChart" width="400"
+                                height="200"></canvas>
+                        </section>
+                    </main>
+                    <!-- Your existing content here -->
+                    <script src="3.appv2.js"></script>
+
+                </html>

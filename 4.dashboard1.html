@@ -1,72 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Expense Tracker</title>
-    <link rel="stylesheet" href="5.dashstyles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-    <header>
-        <h1 id="top">Expense Tracker</h1>
-        <button id="logoutBtn" class="button">Logout</button>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard - Expense Tracker</title>
+        <link rel="stylesheet" href="5.dashstyles.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <div id="container">
-        
-        <nav id="sideNav">
-            <ul>
-                <li><a href="4.dashboard1.html">Home</a></li>
-                <li><a href="budgetplanner.html">Budget Planner</a></li>
-                <li><a href="6.expensehistory.html">History</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-            </ul>
-        </nav>
+    </head>
+    <body>
 
-        <main>
-            <section>
-                <h2>Set Budget Limit</h2>
-                <form id="budgetForm">
-                    <input type="number" id="budgetLimit" placeholder="Set your budget limit" required>
-                    <button type="submit" class="button7">Set Budget</button>
-                </form>
-            </section>
+        <div id="container">
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <div class="brand-logo">
+                        <img src="2.1.3logo.png" alt="Logo">
+                    </div>
+                    <h3>Expence Tracker</h3>
 
-            <section>
-                <h2>Add New Expense</h2>
-                <form id="expenseForm">
-                    <input type="text" id="expenseName" placeholder="Expense Name" required>
-                    <input type="number" id="expenseAmount" placeholder="Amount" required>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="4.dashboard1.html"><i class="fas fa-home"></i>
+                            Dashboard</a></li>
+                    <li><a href="6.Expences.html"><i class="fas fa-home"></i>Add
+                            Expences</a></li>
+                    <li><a href="8.history.html"><i
+                                class="fas fa-chart-line"></i> History</a></li>
+                    <li><a href="11.Buddgetplanner.html"><i
+                                class="fas fa-chart-line"></i> Buddget
+                            Tips</a></li>
+                    <li><a href="12.Aboutus.html"><i
+                                class="fas fa-chart-bar"></i> About Us</a></li>
+
+                </ul>
+
+                <div class="sidebar-footer">
+                    <div class="theme-toggle">
+                        <span>Dark Mode</span>
+                        <label class="switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
                     <br>
-                    <button type="submit" class="button7">Add Expense</button>
-                </form>
-            </section>
+                    <button id="logoutBtn" class="logout-button"><i
+                            class="fas fa-sign-out-alt"></i> Logout</button>
+                    <p style="font-style: italic ; font-size: xx-small;">Web
+                        Version 3.0.0 AY</p>
+                </div>
+            </div>
+            <main>
+                <section>
+                    <p id="balance" style="font-size: 50px;">Current Balance:
+                        ₹0.00</p>
+                    <p id="outOfMoney" style="color: red; display: none;">You
+                        are out of money!</p>
+                </section>
+                <hr style="border-width: px;border-color: goldenrod;">
+                <section>
 
-            <section>
-                <h2>Your Expenses</h2>
-                <p id="balance">Current Balance: ₹0.00</p>
-                <p id="outOfMoney" style="color: red; display: none;">You are out of money!</p>
-                <table id="expenseTable">
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Name</th>
-                            <th>Amount</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Dynamically filled with JavaScript -->
-                    </tbody>
-                </table>
-                <button id="showChartBtn" class="button">Show Monthly Expenses Chart</button>
-                <canvas id="monthlyExpensesChart" width="400" height="200" style="display: none;"></canvas>
-            </section>
-        </main>
-    </div>
+                    <!-- Your existing content here -->
+                    <script src="3.appv2.js"></script>
 
-    <script src="3.appv2.js"></script>
-</body>
-</html>
+                </html>

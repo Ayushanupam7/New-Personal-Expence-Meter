@@ -125,7 +125,7 @@
             /* Right Side - Illustration */
             .illustration-section {
                 flex: 1;
-                background-color:rgb(255, 183, 0);
+                background-color: rgb(255, 183, 0);
                 padding: 40px;
                 border-top-right-radius: 12px;
                 border-bottom-right-radius: 12px;
@@ -178,7 +178,7 @@
                 width: 650px;
                 height: 650px;
                 border-radius: 100%;
-                background-image: linear-gradient(#c7b5b5 90%, #000000);
+                background-image: linear-gradient(#c7b5b5 90%, #f30101);
                 filter: blur(250px);
                 transition: all 450ms ease-out;
                 position: fixed;
@@ -187,6 +187,23 @@
                 top: 0;
                 transform: translate(calc(-50% + 15px), -50%);
                 z-index: -1;
+            }
+
+            /* Blob Background */
+            .blob {
+                width: 650px;
+                height: 650px;
+                border-radius: 50%;
+                background-image: linear-gradient(#c7b5b5 90%, #000000);
+                filter: blur(250px);
+                position: fixed;
+                pointer-events: none;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+                transition: transform 0.3s ease-out;
+                /* Smooth transition for movement */
             }
 
             #logo {

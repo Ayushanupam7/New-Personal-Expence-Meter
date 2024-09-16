@@ -89,8 +89,10 @@ body {
 }
 
 .nav-menu li:hover {
-    background-color:rgb(255, 166, 0);
-    width: 125%;}
+    background-color: rgb(255, 166, 0);
+    width: 125%;
+}
+
 
 .sidebar-footer {
     padding: 20px;
@@ -202,7 +204,7 @@ th {
 
 td {
     padding: 10px;
-    
+
 }
 
 
@@ -230,9 +232,30 @@ td {
     margin-left: 200px;
 }
 
+#expenseDate {
+    border-radius: 34px;
+    padding: 10px;
+    width: 170px;
+    background-color: #a1afff;
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+
+::-webkit-calendar-picker-indicator {
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+
+    border-radius: 20px;
+}
+
 #expenseName {
     border-radius: 34px;
     padding: 10px;
+    margin-top: 15px;
 }
 
 #expenseAmount {
@@ -242,7 +265,7 @@ td {
 }
 
 
-.button7 {  
+.button7 {
     /* Add Expences button */
     padding: 10px;
     width: 150px;
@@ -264,6 +287,7 @@ td {
     border: none;
     cursor: pointer;
 }
+
 #historyBtn {
     margin-top: 20px;
 }
@@ -279,7 +303,8 @@ td {
     margin-right: 10px;
 }
 
-.button12{    padding: 10px;
+.button12 {
+    padding: 10px;
     width: 150px;
     background-color: #ff7b00;
     margin-top: 20px;
@@ -290,7 +315,7 @@ td {
     cursor: pointer;
 }
 
-.button12:hover{
+.button12:hover {
     background-color: #fd0000;
     color: white;
     border: none;
@@ -360,47 +385,50 @@ button:active .icon svg {
 }
 
 .gemini {
-    background: radial-gradient(circle,rgb(255, 166, 0),rgb(0, 47, 255));
+    background: radial-gradient(circle, rgb(255, 166, 0), rgb(0, 47, 255));
     background-clip: text;
     font-size: 40px;
     color: transparent;
     animation: gemini 15s linear infinite;
     background-size: 200% 200%;
 }
+
 @keyframes gemini {
-    
-    0%{
+
+    0% {
         background-position: 0% 0%;
     }
-    
-    50%{
+
+    50% {
         background-position: 100% 100%;
     }
-    
-    100%{
+
+    100% {
         background-position: 0% 0%;
     }
 }
 
 #balance {
-    background: radial-gradient(circle,rgb(0, 0, 0),yellow);
+    background: radial-gradient(circle, rgb(0, 0, 0), yellow);
     background-clip: text;
     font-size: 40px;
     color: transparent;
     animation: gemini 5s linear infinite;
     background-size: 200% 200%;
 }
+
 @keyframes balance {
-    
-    0%{
+
+    0% {
         background-position: 0% 0%;
     }
-    
-    50%{
+
+    50% {
         background-position: 100% 100%;
     }
-    
-    100%{
+
+    100% {
         background-position: 0% 0%;
     }
 }
+
