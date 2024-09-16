@@ -21,12 +21,12 @@ function loadHistory() {
 
 // Handle logout
 document.getElementById('logoutBtn')?.addEventListener('click', function () {
-    window.location.href = 'loginpage.html';
+    window.location.href = '1.loginpage.html';
 });
 
 // Handle back button click
 document.getElementById('backBtn')?.addEventListener('click', function () {
-    window.location.href = 'dashboard1.html'; // Ensure this path is correct
+    window.location.href = '4.dashboard1.html'; // Ensure this path is correct
 });
 
 // Load history when the page loads

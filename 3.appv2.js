@@ -8,7 +8,7 @@ document.getElementById('loginForm1')?.addEventListener('submit', function (e) {
     if (username === 'ayush' && password === '2024')
         {
         // Redirect to dashboard on successful login
-        window.location.href = 'dashboard1.html';
+        window.location.href = '4.dashboard1.html';
     } else {
         // Show error message
         document.getElementById('loginError').textContent = 'Invalid login details';
@@ -153,11 +153,11 @@ window.onload = function () {
 
 // Handle history button click
 document.getElementById('historyBtn')?.addEventListener('click', function () {
-    window.location.href = 'expensehistory.html'; // Make sure this file exists
+    window.location.href = '6.expensehistory.html'; // Make sure this file exists
 });
 // Handle logout
 document.getElementById('logoutBtn')?.addEventListener('click', function () {
-    window.location.href = 'loginpage.html';
+    window.location.href = '1.loginpage.html';
 });
 
 
